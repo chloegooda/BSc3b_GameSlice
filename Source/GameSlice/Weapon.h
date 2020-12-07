@@ -34,15 +34,12 @@ enum class Rank : uint8 {
 	S
 };
 
-UCLASS()
-class GAMESLICE_API AWeapon : public AActor
+USTRUCT(BlueprintType)
+struct FWeaponInfo
 {
 	GENERATED_BODY()
-	
-public:	
-	// Sets default values for this actor's properties
-	AWeapon();
 
+public:
 	UPROPERTY(EditAnywhere, BlueprintReadWrite)
 		FString name;
 	UPROPERTY(EditAnywhere, BlueprintReadWrite)
@@ -59,8 +56,19 @@ public:
 		float attackPower;
 	UPROPERTY(EditAnywhere, BlueprintReadWrite)
 		int range;
+};
+
+UCLASS(Blueprintable)
+class GAMESLICE_API AWeapon : public AActor
+{
+	GENERATED_BODY()
+	
+public:	
+	// Sets default values for this actor's properties
+	AWeapon();
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+		FWeaponInfo WeaponInfo;
 	UPROPERTY(BlueprintReadWrite, VisibleAnywhere)
-		UStaticMeshComponent * mesh_component;
-	/*UPROPERTY(BlueprintReadWrite, VisibleAnywhere)
-		UMaterial * u_material;*/
+		UStaticMeshComponent* mesh_component;
 };

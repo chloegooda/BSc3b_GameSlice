@@ -8,13 +8,7 @@
 // Sets default values
 AWeapon::AWeapon()
 {
- 	// create static mesh component
+ 	// create static mesh component and make root
 	this->mesh_component = CreateDefaultSubobject<UStaticMeshComponent>(TEXT("MeshComponent"));
 	this->RootComponent = this->mesh_component;
-
-	/*
-	// create material component
-	this->u_material = CreateDefaultSubobject<UMaterial>(TEXT("MaterialComponent"));
-	*/
-
 }
