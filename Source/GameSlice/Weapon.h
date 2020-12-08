@@ -3,72 +3,50 @@
 #pragma once
 
 #include "CoreMinimal.h"
-#include "GameFramework/Actor.h"
+#include "BaseItem.h"
 #include "Weapon.generated.h"
 
-UENUM(BlueprintType)
-enum class Type : uint8 {
+UENUM(Blueprintable)
+enum class WeaponType : uint8 {
 	Sword,
-	Lance,
+	Staff,
+	Shield,
 	Axe,
+	Mace,
 	Bow,
-	ThrowingWeapon,
-	Stave
+	Knife
 };
 
-UENUM(BlueprintType)
-enum class Material : uint8 {
+UENUM(Blueprintable)
+enum class WeaponMaterial : uint8 {
 	Wood,
 	Iron,
 	Steel,
 	Silver
 };
 
-UENUM(BlueprintType)
-enum class Rank : uint8 {
-	E,
-	D,
-	C,
-	B,
-	A,
-	S
-};
-
-USTRUCT(BlueprintType)
+USTRUCT(Blueprintable)
 struct FWeaponInfo
 {
 	GENERATED_BODY()
 
 public:
 	UPROPERTY(EditAnywhere, BlueprintReadWrite)
-		FString name;
+		WeaponType weaponType = WeaponType::Sword;
 	UPROPERTY(EditAnywhere, BlueprintReadWrite)
-		Type type = Type::Sword;
-	UPROPERTY(EditAnywhere, BlueprintReadWrite)
-		Material material = Material::Wood;
-	UPROPERTY(EditAnywhere, BlueprintReadWrite)
-		int value;
+		WeaponMaterial material = WeaponMaterial::Wood;
 	UPROPERTY(EditAnywhere, BlueprintReadWrite)
 		int durability;
-	UPROPERTY(EditAnywhere, BlueprintReadWrite)
-		Rank rank = Rank::E;
-	UPROPERTY(EditAnywhere, BlueprintReadWrite)
-		float attackPower;
-	UPROPERTY(EditAnywhere, BlueprintReadWrite)
-		int range;
 };
 
-UCLASS(Blueprintable)
-class GAMESLICE_API AWeapon : public AActor
+UCLASS()
+class GAMESLICE_API AWeapon : public ABaseItem
 {
 	GENERATED_BODY()
-	
-public:	
-	// Sets default values for this actor's properties
-	AWeapon();
+
+public:
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite)
 		FWeaponInfo WeaponInfo;
-	UPROPERTY(BlueprintReadWrite, VisibleAnywhere)
-		UStaticMeshComponent* mesh_component;
+	
 };
