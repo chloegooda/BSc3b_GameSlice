@@ -47,7 +47,6 @@ public:
 	UFUNCTION(BlueprintCallable, BlueprintNativeEvent)
 		void PickUpItem();
 	virtual void PickUpItem_Implementation() {
-		GEngine->AddOnScreenDebugMessage(-1, 2.f, FColor::Red, FString::Printf(TEXT("Picked up")));
 		this->Destroy();
 	}
 
