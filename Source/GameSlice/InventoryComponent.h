@@ -7,7 +7,7 @@
 #include "InventoryComponent.generated.h"
 
 USTRUCT(BlueprintType)
-struct FInventorySlot
+struct FInvSlot
 {
 	GENERATED_BODY()
 
@@ -26,5 +26,5 @@ class GAMESLICE_API UInventoryComponent : public UActorComponent
 
 public:
 	UPROPERTY(EditAnywhere, BlueprintReadWrite)
-		TArray<FInventorySlot> ItemList;
+		TArray<FInvSlot> ItemList;
 };
