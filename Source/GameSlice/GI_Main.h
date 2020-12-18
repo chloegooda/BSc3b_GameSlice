@@ -30,30 +30,12 @@ public:
 	UPROPERTY(EditAnywhere, BlueprintReadWrite)
 		TArray<FInventorySlot> ItemList;
 
-	UFUNCTION(BlueprintCallable, BlueprintNativeEvent)
-	void AddItemToInventory(struct FItemInfo NewItem);
-	virtual void AddItemToInventory_Implementation(struct FItemInfo NewItem) {
-		GEngine->AddOnScreenDebugMessage(-1, 15.f, FColor::Green, FString::Printf(TEXT("Picked Up +1 %s"), *NewItem.name));
-		for (int i = 0; i < ItemList.Num(); i++) {
-			if (ItemList[i].ItemName == NewItem.name) {
-				ItemList[i].Stack++;
-				return;
-			}
-		}
-		ItemList.Add(FInventorySlot{ NewItem.name, 1 });
-		return;
-	}
+	UFUNCTION(BlueprintCallable)
+		void AddItemToInventory(struct FItemInfo NewItem);
 
-	UFUNCTION(BlueprintCallable, BlueprintNativeEvent)
+	UFUNCTION(BlueprintCallable)
 		void HasQuantity();
-	virtual void HasQuantity_Implementation() {
-		// This will possibly be used when using/discarding items from the inventory?
-		GEngine->AddOnScreenDebugMessage(-1, 15.f, FColor::Red, FString::Printf(TEXT("AddItemToInventory function")));
-	}
 
-	UFUNCTION(BlueprintCallable, BlueprintNativeEvent)
+	UFUNCTION(BlueprintCallable)
 		void RemoveQuantity();
-	virtual void RemoveQuantity_Implementation() {
-		GEngine->AddOnScreenDebugMessage(-1, 15.f, FColor::Red, FString::Printf(TEXT("AddItemToInventory function")));
-	}
 };
