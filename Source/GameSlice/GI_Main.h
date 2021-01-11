@@ -3,6 +3,8 @@
 #pragma once
 
 #include "CoreMinimal.h"
+
+/*
 #include "GameSlice/BaseItem.h"
 #include "Containers/Array.h"
 #include "Engine/GameInstance.h"
@@ -39,3 +41,5 @@ public:
 	UFUNCTION(BlueprintCallable)
 		void RemoveQuantity();
 };
+
+*/

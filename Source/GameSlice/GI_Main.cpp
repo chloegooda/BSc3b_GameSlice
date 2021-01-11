@@ -3,6 +3,8 @@
 
 #include "GI_Main.h"
 
+/*
+
 void UGI_Main::AddItemToInventory(struct FItemInfo NewItem) {
 	GEngine->AddOnScreenDebugMessage(-1, 15.f, FColor::Green, FString::Printf(TEXT("Picked Up +1 %s"), *NewItem.name));
 	for (int i = 0; i < ItemList.Num(); i++) {
@@ -23,3 +25,5 @@ void UGI_Main::HasQuantity_Implementation() {
 void UGI_Main::RemoveQuantity_Implementation() {
 	GEngine->AddOnScreenDebugMessage(-1, 15.f, FColor::Red, FString::Printf(TEXT("AddItemToInventory function")));
 }
+
+*/
