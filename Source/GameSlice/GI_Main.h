@@ -4,7 +4,6 @@
 
 #include "CoreMinimal.h"
 
-/*
 #include "GameSlice/BaseItem.h"
 #include "Containers/Array.h"
 #include "Engine/GameInstance.h"
@@ -35,11 +34,13 @@ public:
 	UFUNCTION(BlueprintCallable)
 		void AddItemToInventory(struct FItemInfo NewItem);
 
+	/*
+
 	UFUNCTION(BlueprintCallable)
 		void HasQuantity();
 
 	UFUNCTION(BlueprintCallable)
 		void RemoveQuantity();
-};
 
-*/
+		*/
+};
