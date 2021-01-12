@@ -10,6 +10,7 @@ ANPC_Base::ANPC_Base()
 	PrimaryActorTick.bCanEverTick = true;
 
 	Speed = 0; // This sets a default value for the variable
+	Type = "NPC";
 
 }
 
@@ -21,7 +22,6 @@ void ANPC_Base::BeginPlay()
 	Speed = 10; // This will override the default value
 
 	UE_LOG(LogTemp, Warning, TEXT("ANPC_Base::BeginPlay: 10 times speed = %f"), SpeedTimesTen()); // This created a print in the output log (Useful for debug)
-	
 }
 
 // Called every frame

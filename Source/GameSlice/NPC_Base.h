@@ -18,6 +18,12 @@ public:
 	UPROPERTY(VisibleAnywhere, BlueprintReadWrite, Category = "Mechanics") // Creation of a variable
 		float Speed; 
 
+	UPROPERTY(VisibleAnywhere, BlueprintReadWrite, Category = "Characters") 
+		FString Name;
+
+	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "Characters") 
+		FString Type;
+
 protected:
 	// Called when the game starts or when spawned
 	virtual void BeginPlay() override;
