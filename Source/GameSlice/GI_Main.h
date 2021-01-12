@@ -35,12 +35,10 @@ public:
 		void AddItemToInventory(struct FItemInfo NewItem);
 
 	/*
-
 	UFUNCTION(BlueprintCallable)
 		void HasQuantity();
 
 	UFUNCTION(BlueprintCallable)
 		void RemoveQuantity();
-
-		*/
+	*/
 };
