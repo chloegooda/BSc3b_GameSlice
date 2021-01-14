@@ -19,9 +19,9 @@ void ANPC_Base::BeginPlay()
 {
 	Super::BeginPlay();
 
-	Speed = 10; // This will override the default value
+	// Speed = 100; // This will override the default value
 
-	UE_LOG(LogTemp, Warning, TEXT("ANPC_Base::BeginPlay: 10 times speed = %f"), SpeedTimesTen()); // This created a print in the output log (Useful for debug)
+	// UE_LOG(LogTemp, Warning, TEXT("ANPC_Base::BeginPlay: 10 times speed = %f"), SpeedTimesTen()); // This created a print in the output log (Useful for debug)
 }
 
 // Called every frame
@@ -38,9 +38,8 @@ void ANPC_Base::SetupPlayerInputComponent(UInputComponent* PlayerInputComponent)
 
 }
 
-float ANPC_Base::SpeedTimesTen()
+/*float ANPC_Base::SpeedTimesTen()
 {
 	return Speed * 10; // Functionality of the SpeedTimesTen function made in the header file
 }
-
-
+*/

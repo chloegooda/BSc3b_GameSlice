@@ -15,7 +15,7 @@ public:
 	// Sets default values for this character's properties
 	ANPC_Base();
 
-	UPROPERTY(VisibleAnywhere, BlueprintReadWrite, Category = "Mechanics") // Creation of a variable
+	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "Mechanics") // Creation of a variable
 		float Speed; 
 
 	UPROPERTY(VisibleAnywhere, BlueprintReadWrite, Category = "Characters") 
@@ -35,6 +35,7 @@ public:
 	// Called to bind functionality to input
 	virtual void SetupPlayerInputComponent(class UInputComponent* PlayerInputComponent) override;
 
-	UFUNCTION(BlueprintCallable, Category = "Mechanics") // Creation of a function
+	/*UFUNCTION(BlueprintCallable, Category = "Mechanics") // Creation of a function
 	float SpeedTimesTen();
+	*/
 };

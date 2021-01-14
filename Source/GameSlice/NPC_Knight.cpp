@@ -6,5 +6,6 @@
 ANPC_Knight::ANPC_Knight()
 {
 	PrimaryActorTick.bCanEverTick = true;
+	Speed = 500;
 	Type = "Knight";
 }
