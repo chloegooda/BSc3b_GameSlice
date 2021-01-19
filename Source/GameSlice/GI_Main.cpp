@@ -16,6 +16,11 @@ void UGI_Main::AddItemToInventory(struct FItemInfo NewItem) {
 	return;
 }
 
+void UGI_Main::IncreasePlayerGold(int valueToAdd) {
+	playerGold += valueToAdd;
+	return;
+}
+
 /*
 void UGI_Main::HasQuantity() {
 	// This will possibly be used when using/discarding items from the inventory?
