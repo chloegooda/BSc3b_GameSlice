@@ -4,22 +4,25 @@
 
 #include "CoreMinimal.h"
 #include "GameFramework/Actor.h"
+#include "Engine/DataTable.h"
 #include "BaseItem.generated.h"
 
-UENUM(Blueprintable)
+UENUM(BlueprintType)
 enum class ItemType : uint8 {
 	Weapon,
 	Potion
 };
 
-USTRUCT(Blueprintable)
-struct FItemInfo
+USTRUCT(BlueprintType)
+struct FItemInfo : public FTableRowBase
 {
 	GENERATED_BODY()
 
 public:
 	UPROPERTY(EditAnywhere, BlueprintReadWrite)
 		FString name;
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+		FString ID;
 	UPROPERTY(EditAnywhere, BlueprintReadWrite)
 		ItemType itemType = ItemType::Weapon;
 	UPROPERTY(EditAnywhere, BlueprintReadWrite)
