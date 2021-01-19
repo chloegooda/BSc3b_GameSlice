@@ -31,14 +31,8 @@ public:
 	UPROPERTY(EditAnywhere, BlueprintReadWrite)
 		TArray<FInventorySlot> ItemList;
 
-	UPROPERTY(EditAnywhere, BlueprintReadWrite)
-		int playerGold;
-
 	UFUNCTION(BlueprintCallable)
 		void AddItemToInventory(struct FItemInfo NewItem);
-
-	UFUNCTION(BlueprintCallable)
-		void IncreasePlayerGold(int valueToAdd);
 
 	/*
 	UFUNCTION(BlueprintCallable)
