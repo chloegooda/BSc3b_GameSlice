@@ -22,7 +22,7 @@ public:
 	UPROPERTY(EditAnywhere, BlueprintReadWrite)
 		FString name;
 	UPROPERTY(EditAnywhere, BlueprintReadWrite)
-		FString ID;
+		int ID;
 	UPROPERTY(EditAnywhere, BlueprintReadWrite)
 		ItemType itemType = ItemType::Weapon;
 	UPROPERTY(EditAnywhere, BlueprintReadWrite)

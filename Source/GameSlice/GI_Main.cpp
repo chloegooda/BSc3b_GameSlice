@@ -12,7 +12,7 @@ void UGI_Main::AddItemToInventory(struct FItemInfo NewItem) {
 			return;
 		}
 	}
-	ItemList.Add(FInventorySlot{ NewItem.name, 1 });
+	ItemList.Add(FInventorySlot{ NewItem.name, NewItem.ID, 1 });
 	return;
 }
 

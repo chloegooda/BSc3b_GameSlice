@@ -18,6 +18,8 @@ public:
 	UPROPERTY(EditAnywhere, BlueprintReadWrite)
 		FString ItemName;
 	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+		int ID;
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
 		int Stack;
 };
 
