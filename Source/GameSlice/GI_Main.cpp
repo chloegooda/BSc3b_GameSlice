@@ -9,12 +9,10 @@ void UGI_Main::AddItemToInventory(struct FItemInfo NewItem) {
 	for (int i = 0; i < ItemList.Num(); i++) {
 		if (ItemList[i].ItemName == NewItem.name) {
 			ItemList[i].Stack++;
-			IncreasePlayerGold(-NewItem.value);
 			return;
 		}
 	}
 	ItemList.Add(FInventorySlot{ NewItem.name, NewItem.ID, 1 });
-	IncreasePlayerGold(-NewItem.value);
 	return;
 }
 
@@ -27,7 +25,6 @@ void UGI_Main::RemoveItemFromInventory(struct FItemInfo ItemToRemove) {
 	for (int i = 0; i < ItemList.Num(); i++) {
 		if (ItemList[i].ItemName == ItemToRemove.name) {
 			ItemList[i].Stack -= 1;
-			IncreasePlayerGold(ItemToRemove.value);
 			if (ItemList[i].Stack == 0) {
 				ItemList.RemoveAt(i);
 			}
