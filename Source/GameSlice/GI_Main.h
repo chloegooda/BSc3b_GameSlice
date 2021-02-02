@@ -42,6 +42,9 @@ public:
 	UFUNCTION(BlueprintCallable)
 		void IncreasePlayerGold(int valueToAdd);
 
+	UFUNCTION(BlueprintCallable)
+		void RemoveItemFromInventory(struct FItemInfo ItemToRemove);
+
 	/*
 	UFUNCTION(BlueprintCallable)
 		void HasQuantity();
