@@ -10,7 +10,8 @@
 UENUM(BlueprintType)
 enum class ItemType : uint8 {
 	Weapon,
-	Potion
+	Potion,
+	Misc
 };
 
 USTRUCT(BlueprintType)
@@ -24,7 +25,7 @@ public:
 	UPROPERTY(EditAnywhere, BlueprintReadWrite)
 		int ID;
 	UPROPERTY(EditAnywhere, BlueprintReadWrite)
-		ItemType itemType = ItemType::Weapon;
+		ItemType itemType = ItemType::Misc;
 	UPROPERTY(EditAnywhere, BlueprintReadWrite)
 		int value;
 	UPROPERTY(EditAnywhere, BlueprintReadWrite)
