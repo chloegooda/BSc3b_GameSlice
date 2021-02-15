@@ -34,16 +34,19 @@ public:
 		TArray<FInventorySlot> ItemList;
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+		TArray<FInventorySlot> KeyItemList;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
 		int playerGold;
 
 	UFUNCTION(BlueprintCallable)
-		void AddItemToInventory(struct FItemInfo NewItem);
+		void AddItemToInventory(struct FItemInfo NewItem, TArray<FInventorySlot> Inventory);
 
 	UFUNCTION(BlueprintCallable)
 		void IncreasePlayerGold(int valueToAdd);
 
 	UFUNCTION(BlueprintCallable)
-		void RemoveItemFromInventory(struct FItemInfo ItemToRemove);
+		void RemoveItemFromInventory(struct FItemInfo ItemToRemove, TArray<FInventorySlot> Inventory);
 
 	/*
 	UFUNCTION(BlueprintCallable)

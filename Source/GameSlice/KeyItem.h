@@ -5,16 +5,10 @@
 #include "CoreMinimal.h"
 #include "GameFramework/Actor.h"
 #include "Engine/DataTable.h"
-#include "BaseItem.generated.h"
-
-UENUM(BlueprintType)
-enum class ItemType : uint8 {
-	Weapon,
-	Potion
-};
+#include "KeyItem.generated.h"
 
 USTRUCT(BlueprintType)
-struct FItemInfo : public FTableRowBase
+struct FKeyItemInfo : public FTableRowBase
 {
 	GENERATED_BODY()
 
@@ -23,27 +17,19 @@ public:
 		FString name;
 	UPROPERTY(EditAnywhere, BlueprintReadWrite)
 		int ID;
-	UPROPERTY(EditAnywhere, BlueprintReadWrite)
-		ItemType itemType = ItemType::Weapon;
-	UPROPERTY(EditAnywhere, BlueprintReadWrite)
-		int value;
-	UPROPERTY(EditAnywhere, BlueprintReadWrite)
-		float power;
-	UPROPERTY(EditAnywhere, BlueprintReadWrite)
-		int range;
 };
 
 UCLASS()
-class GAMESLICE_API ABaseItem : public AActor
+class GAMESLICE_API AKeyItem : public AActor
 {
 	GENERATED_BODY()
-	
-public:	
+
+public:
 	// Sets default values for this actor's properties
-	ABaseItem();
+	AKeyItem();
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite)
-		FItemInfo ItemInfo;
+		FKeyItemInfo KeyItemInfo;
 	UPROPERTY(BlueprintReadWrite, VisibleAnywhere)
 		UStaticMeshComponent* MeshComponent;
 
