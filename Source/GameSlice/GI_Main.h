@@ -5,6 +5,7 @@
 #include "CoreMinimal.h"
 
 #include "GameSlice/BaseItem.h"
+#include "GameSlice/KeyItem.h"
 #include "Containers/Array.h"
 #include "Engine/GameInstance.h"
 #include "GI_Main.generated.h"
@@ -40,13 +41,19 @@ public:
 		int playerGold;
 
 	UFUNCTION(BlueprintCallable)
-		void AddItemToInventory(struct FItemInfo NewItem, TArray<FInventorySlot> Inventory);
+		void AddItemToInventory(struct FItemInfo NewItem);
+
+	UFUNCTION(BlueprintCallable)
+		void AddKeyItem(struct FKeyItemInfo NewKeyItem);
 
 	UFUNCTION(BlueprintCallable)
 		void IncreasePlayerGold(int valueToAdd);
 
 	UFUNCTION(BlueprintCallable)
-		void RemoveItemFromInventory(struct FItemInfo ItemToRemove, TArray<FInventorySlot> Inventory);
+		void RemoveItemFromInventory(struct FItemInfo ItemToRemove);
+
+	UFUNCTION(BlueprintCallable)
+		void RemoveKeyItem(struct FKeyItemInfo KeyItemToRemove);
 
 	/*
 	UFUNCTION(BlueprintCallable)
