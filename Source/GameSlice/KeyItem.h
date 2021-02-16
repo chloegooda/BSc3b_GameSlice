@@ -17,6 +17,8 @@ public:
 		FString name;
 	UPROPERTY(EditAnywhere, BlueprintReadWrite)
 		int ID;
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+		FString questName;
 };
 
 UCLASS()
