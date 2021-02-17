@@ -8,6 +8,7 @@
 #include "GameSlice/KeyItem.h"
 #include "Containers/Array.h"
 #include "Engine/GameInstance.h"
+#include "Components/AudioComponent.h"
 #include "GI_Main.generated.h"
 
 USTRUCT(BlueprintType)
@@ -40,6 +41,9 @@ public:
 	UPROPERTY(EditAnywhere, BlueprintReadWrite)
 		int playerGold;
 
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Audio Component")
+		UAudioComponent* SoundManager;
+
 	UFUNCTION(BlueprintCallable)
 		void AddItemToInventory(struct FItemInfo NewItem);
 
@@ -54,12 +58,4 @@ public:
 
 	UFUNCTION(BlueprintCallable)
 		void RemoveKeyItem(struct FKeyItemInfo KeyItemToRemove);
-
-	/*
-	UFUNCTION(BlueprintCallable)
-		void HasQuantity();
-
-	UFUNCTION(BlueprintCallable)
-		void RemoveQuantity();
-	*/
 };

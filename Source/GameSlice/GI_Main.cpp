@@ -58,14 +58,3 @@ void UGI_Main::RemoveKeyItem(struct FKeyItemInfo KeyItemToRemove) {
 	}
 	return;
 }
-
-/*
-void UGI_Main::HasQuantity() {
-	// This will possibly be used when using/discarding items from the inventory?
-	GEngine->AddOnScreenDebugMessage(-1, 15.f, FColor::Red, FString::Printf(TEXT("HasQuantity function")));
-}
-
-void UGI_Main::RemoveQuantity() {
-	GEngine->AddOnScreenDebugMessage(-1, 15.f, FColor::Red, FString::Printf(TEXT("RemoveQuantity function")));
-}
-*/
