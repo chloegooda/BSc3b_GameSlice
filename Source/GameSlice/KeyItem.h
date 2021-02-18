@@ -38,7 +38,8 @@ public:
 	UFUNCTION(BlueprintCallable, BlueprintNativeEvent)
 		void PickUpItem();
 	virtual void PickUpItem_Implementation() {
-		this->Destroy();
+		this->SetActorEnableCollision(false);
+		this->SetActorHiddenInGame(true);
 	}
 
 };
